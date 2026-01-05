@@ -81,41 +81,6 @@ El modelo mostró un desempeño consistente en el conjunto de prueba, siendo ade
 
 ---
 
-## Guardado del modelo
-
-El modelo entrenado fue serializado utilizando joblib:
-
-```python
-joblib.dump(gb_model, "modelo_FlightOnTime.pkl")
-```
-
-Este archivo puede ser cargado directamente por una API sin necesidad de reentrenar el modelo.
-
----
-
-## Uso en una API (ejemplo conceptual)
-
-```python
-import joblib
-
-model = joblib.load("modelo_FlightOnTime.pkl")
-pred = model.predict(X_input)
-```
-
-El input debe respetar el mismo orden y estructura de las variables usadas durante el entrenamiento.
-
----
-
-## Estructura esperada del proyecto
-
-```
-model/
-│── modelo_FlightOnTime.pkl
-│── README.md
-```
-
----
-
 ## Consideraciones importantes
 
 * El modelo no reentrena automáticamente
